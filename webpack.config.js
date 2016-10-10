@@ -6,6 +6,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const HOST = process.env.HOST || "127.0.0.1";
 const PORT = process.env.PORT || "3001";
+const PORT_PROXY = "3002";
+
 
 // global css
 loaders.push({
@@ -17,7 +19,7 @@ loaders.push({
 });
 // local scss modules
 loaders.push({
-	test: /[\/\\]src[\/\\].*\.scss/,
+	test: /[\/\\]docs[\/\\].*\.scss/,
 	exclude: /(node_modules|bower_components|public)/,
 	loaders: [
 		'style?sourceMap',
@@ -28,7 +30,7 @@ loaders.push({
 
 // local css modules
 loaders.push({
-	test: /[\/\\]src[\/\\].*\.css/,
+	test: /[\/\\]docs[\/\\].*\.css/,
 	exclude: /(node_modules|bower_components|public)/,
 	loaders: [
 		'style?sourceMap',
@@ -40,15 +42,18 @@ module.exports = {
 	entry: [
 		`webpack-dev-server/client?http://${HOST}:${PORT}`,
 		`webpack/hot/only-dev-server`,
-		`./src/index.jsx` // Your appʼs entry point
+		`./docs/index.js` // Your appʼs entry point
 	],
-	devtool: process.env.WEBPACK_DEVTOOL || 'cheap-module-source-map',
+	devtool: process.env.WEBPACK_DEVTOOL || 'inline-source-map',
 	output: {
 		path: path.join(__dirname, 'docs'),
-		filename: 'bundle.js'
+		filename: '/bundle.js'
 	},
 	resolve: {
-		extensions: ['', '.js', '.jsx']
+		extensions: ['', '.js', '.jsx'],
+		alias: {
+      'materialistic': path.resolve(__dirname, './src')
+    }
 	},
 	module: {
 		loaders
@@ -64,13 +69,19 @@ module.exports = {
 		// serve index.html in place of 404 responses to allow HTML5 history
 		historyApiFallback: true,
 		port: PORT,
-		host: HOST
+		host: HOST,
+		proxy: {
+      '/restapi/*': {
+        target: `http://${HOST}:${PORT_PROXY}`,
+        secure: false
+      }
+    }
 	},
 	plugins: [
 		new webpack.NoErrorsPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
 		new HtmlWebpackPlugin({
-			template: './src/template.html'
+			template: './docs/docs-template.html'
 		}),
 	]
 };

@@ -27,7 +27,7 @@ loaders.push({
 
 module.exports = {
 	entry: {
-		'materialistic': './src/index.jsx'
+		'materialistic': './src/index.js'
 	},
 	devtool: "source-map",
 	output: {
@@ -78,10 +78,6 @@ module.exports = {
 		new webpack.optimize.OccurenceOrderPlugin(),
 		new ExtractTextPlugin('[contenthash].css', {
 			allChunks: true
-		}),
-		new HtmlWebpackPlugin({
-			template: './src/template.html',
-			title: 'materialistic'
 		}),
 		new webpack.optimize.DedupePlugin()
 	]
