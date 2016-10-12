@@ -17,9 +17,11 @@ loaders.push({
 		'css'
 	]
 });
+
+/*
 // local scss modules
 loaders.push({
-	test: /[\/\\]docs[\/\\].*\.scss/,
+	test: /\.scss$/,
 	exclude: /(node_modules|bower_components|public)/,
 	loaders: [
 		'style?sourceMap',
@@ -27,6 +29,14 @@ loaders.push({
 		'sass'
 	]
 });
+*/
+
+loaders.push({
+	test: /\.scss$/,
+  exclude: /node_modules/,
+  loader: "style-loader!css-loader!sass-loader"
+});
+
 
 // local css modules
 loaders.push({

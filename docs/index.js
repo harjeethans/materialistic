@@ -2,6 +2,7 @@ import 'material-design-lite/material.css';
 
 //import './assets/docs.css';
 
+import css from '../src/index.scss';
 import styles from './index.scss';
 import React from 'react'
 import { render } from 'react-dom';

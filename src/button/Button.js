@@ -25,12 +25,12 @@ function Button(props) {
   const classes = classnames(baseClasses, {
     'mdl-button--fab': floating,
     'mdl-button--colored': colored,
-    'mdl-js-ripple-effect': ripple,
     'mdl-button--raised': raised,
     'mdl-button--primary': primary,
     'mdl-button--accent': accent,
     'mdl-button--icon': icon,
-    'mdl-button--mini-fab': floating && mini
+    'mdl-button--mini-fab': floating && mini,
+    'ripple-effect': ripple
   }, className);
 
   return (
@@ -42,8 +42,8 @@ function Button(props) {
 
 
 Button.propTypes = {
-  className: React.PropTypes.string,
-  floating: React.PropTypes.bool,
+  className: React.PropTypes.string, //adds a custom css class
+  floating: React.PropTypes.bool, // aka fab
   colored: React.PropTypes.bool,
   ripple: React.PropTypes.bool,
   raised: React.PropTypes.bool,

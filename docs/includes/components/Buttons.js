@@ -11,35 +11,53 @@ class Buttons extends React.Component {
       <div className="docs-sample">
         <div className="mdl-grid">
           <div className="mdl-cell mdl-cell--4-col">
-            <Button><i className="material-icons">add</i></Button>
+            <h6>Properties used</h6>
           </div>
           <div className="mdl-cell mdl-cell--4-col">
-            4
+            <h6>Component</h6>
           </div>
           <div className="mdl-cell mdl-cell--4-col">
-            4
-          </div>
-        </div>
-        <div className="mdl-grid">
-          <div className="mdl-cell mdl-cell--4-col">
-            <Button raised={1===1}><i className="material-icons">add</i>Raised</Button>
+            <h6>Caveats</h6>
           </div>
           <div className="mdl-cell mdl-cell--4-col">
-            4
+            <code>raised=true primary=true ripple=true</code>
           </div>
           <div className="mdl-cell mdl-cell--4-col">
-            4
+            <Button raised={1===1} primary={1===1} ripple={1===1}>Primary</Button>
+          </div>
+          <div className="mdl-cell mdl-cell--4-col">
+            <span>Ripple effect is css based.</span>
           </div>
         </div>
         <div className="mdl-grid">
           <div className="mdl-cell mdl-cell--4-col">
-            <Button mini={1===1} floating={1===1}><i className="material-icons">add</i></Button>
+            <code>raised=true accent=true ripple=true</code>
           </div>
           <div className="mdl-cell mdl-cell--4-col">
-            4
+            <Button raised={1===1} accent={1===1} ripple={1===1}><i className="material-icons">add</i>Raised</Button>
           </div>
           <div className="mdl-cell mdl-cell--4-col">
-            4
+            @todo
+          </div>
+        </div>
+        <div className="mdl-grid">
+          <div className="mdl-cell mdl-cell--4-col">
+            <code>mini=true floating=true ripple=true icon=true</code>
+          </div>
+          <div className="mdl-cell mdl-cell--4-col">
+            <Button mini={1===1} floating={1===1}  icon={1===1} colored={1===2}><i className="material-icons">add</i></Button>
+          </div>
+          <div className="mdl-cell mdl-cell--4-col">
+            @todo
+          </div>
+        </div>
+        <div className="mdl-grid">
+          <div className="mdl-cell mdl-cell--12-col">
+            <pre>
+              <code>
+                @todo add some code samples here.
+              </code>
+            </pre>
           </div>
         </div>
       </div>
