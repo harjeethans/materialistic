@@ -5,7 +5,6 @@ import {Button} from 'materialistic';
 class Buttons extends React.Component {
 
   render() {
-    console.log('ccccc');
 
     return (
       <div className="docs-sample">
@@ -34,7 +33,7 @@ class Buttons extends React.Component {
             <code>raised=true accent=true ripple=true</code>
           </div>
           <div className="mdl-cell mdl-cell--4-col">
-            <Button raised={1===1} accent={1===1} ripple={1===1}><i className="material-icons">add</i>Raised</Button>
+            <Button raised={1===1} accent={1===1} ripple={1===1}>Raised</Button>
           </div>
           <div className="mdl-cell mdl-cell--4-col">
             @todo

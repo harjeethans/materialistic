@@ -30,14 +30,14 @@ class App extends React.Component {
             </nav>
             <div className="mdl-layout-spacer"></div>
             <nav className="mdl-navigation mdl-layout--large-screen-only">
-            <Link className="mdl-navigation__link" to="github">GitHub</Link>
+            <Link className="mdl-navigation__link" to="https://github.com/harjeethans/materialistic">GitHub</Link>
             </nav>
           </div>
         </header>
         <div className="mdl-layout__drawer">
           <span className="mdl-layout-title">materialistic</span>
           <nav className="mdl-navigation">
-            <Link className="mdl-navigation__link" to="github">GitHub</Link>
+            <Link className="mdl-navigation__link" to="https://github.com/harjeethans/materialistic">GitHub</Link>
           </nav>
         </div>
         <main className="mdl-layout__content">

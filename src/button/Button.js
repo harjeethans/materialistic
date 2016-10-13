@@ -1,5 +1,5 @@
-const React = require('react');
-const classnames = require('classnames');
+import React, { PropTypes }  from 'react';
+import classnames from 'classnames';
 
 const baseClasses = {
   'mdl-button': true,
@@ -41,16 +41,16 @@ function Button(props) {
 }
 
 
-Button.propTypes = {
-  className: React.PropTypes.string, //adds a custom css class
-  floating: React.PropTypes.bool, // aka fab
-  colored: React.PropTypes.bool,
-  ripple: React.PropTypes.bool,
-  raised: React.PropTypes.bool,
-  primary: React.PropTypes.bool,
-  accent: React.PropTypes.bool,
-  icon: React.PropTypes.bool,
-  mini: React.PropTypes.bool
+Button.PropTypes = {
+  className: PropTypes.string, //adds a custom css class
+  floating: PropTypes.bool, // aka fab
+  colored: PropTypes.bool,
+  ripple: PropTypes.bool,
+  raised: PropTypes.bool,
+  primary: PropTypes.bool,
+  accent: PropTypes.bool,
+  icon: PropTypes.bool,
+  mini: PropTypes.bool
 };
 
 export default Button;
