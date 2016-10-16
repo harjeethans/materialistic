@@ -9,6 +9,8 @@ import PageNotFound from './PageNotFound';
 
 import Badges from './components/Badges';
 import Buttons from './components/Buttons';
+import Menus from './components/Menus';
+
 import Cards from './components/Cards';
 import Chips from './components/Chips';
 import Dialogs from './components/Dialogs';
@@ -24,6 +26,7 @@ export {
   PageNotFound,
   Badges,
   Buttons,
+  Menus,
   Cards,
   Chips,
   Dialogs,

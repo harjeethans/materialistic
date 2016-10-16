@@ -20,6 +20,7 @@ import {
   PageNotFound,
   Badges,
   Buttons,
+  Menus,
   Cards,
   Chips,
   Dialogs,
@@ -39,6 +40,10 @@ const routesData = {
         },
         {
           path: 'buttons',
+          component:Home
+        },
+        {
+          path: 'menus',
           component:Home
         },
         {
@@ -66,6 +71,7 @@ const routes = (
         <IndexRoute component={Components} />
         <Route path="badges" component={Badges}></Route>
         <Route path="buttons" component={Buttons}></Route>
+        <Route path="menus" component={Menus}></Route>
         <Route path="cards" component={Cards}></Route>
         <Route path="chips" component={Chips}></Route>
         <Route path="dialogs" component={Dialogs}></Route>

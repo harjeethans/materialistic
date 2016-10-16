@@ -6,6 +6,9 @@ export const sidebarData = [
     text: 'Buttons',
     href: 'components/buttons'
   }, {
+    text: 'Menus',
+    href: 'components/menus'
+  }, {
     text: 'Cards',
     href: 'components/cards'
   }, {
