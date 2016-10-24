@@ -1,6 +1,10 @@
 import React, { PropTypes }  from 'react';
 import classnames from 'classnames';
 
+const baseClasses = {
+  'mdl-menu__item': true
+};
+
 function MenuItem(props) {
 
   const {
@@ -11,28 +15,22 @@ function MenuItem(props) {
     ...elementProps
   } = props;
 
-  const classes = classnames(baseClass, className, {[dividerClass]: divider});
+  const classes = classnames(baseClasses, className, {[dividerClass]: divider});
   return (
-    <li className={classes} {...elementProps}></li>
+    <li className={classes} {...elementProps}>{children}</li>
   );
 }
 
 
 MenuItem.PropTypes = {
-  baseClass: PropTypes.string,
   className: PropTypes.string,
-  background: PropTypes.bool,
   divider: PropTypes.bool,
   dividerClass: PropTypes.string,
-  overlap: PropTypes.bool,
-  useTag: PropTypes.oneOf(['a','span', 'div'])
+  overlap: PropTypes.bool
 };
 
 MenuItem.defaultProps = {
-  baseClass: 'mdl-menu__item',
-  background: true,
-  dividerClass: 'mdl-menu__item--full-bleed-divider',
-  useTag: 'span'
+  dividerClass: 'mdl-menu__item--full-bleed-divider'
 }
 
 export default MenuItem;

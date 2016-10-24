@@ -1,0 +1,16 @@
+.mdl-menu {
+  position: relative;
+  &__container{
+    width: 100%;
+    position: relative;
+  }
+  &--small {
+    width: 150px;
+  }
+  &--medium {
+    width: 250px
+  }
+  &--large {
+    width: 400px;
+  }
+}
