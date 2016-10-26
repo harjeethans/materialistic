@@ -6,7 +6,13 @@ class Menus extends React.Component {
   render() {
     return (
       <div style={{width:200}}>
-        <Menu className="foo">
+        <Menu className="foo" label="options">
+          <MenuItem className="mdl-menu__item">Some Action</MenuItem>
+          <MenuItem className="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</MenuItem>
+          <MenuItem disabled className="mdl-menu__item">Disabled Action</MenuItem>
+          <MenuItem className="mdl-menu__item">Yet Another Action</MenuItem>
+        </Menu>
+        <Menu className="bar" icon="more_vert">
           <MenuItem className="mdl-menu__item">Some Action</MenuItem>
           <MenuItem className="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</MenuItem>
           <MenuItem disabled className="mdl-menu__item">Disabled Action</MenuItem>
