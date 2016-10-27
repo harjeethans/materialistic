@@ -12,6 +12,7 @@ import { browserHistory, Router, Route, Link, IndexRoute } from 'react-router'
 import {
   About,
   App,
+  BasicTable,
   Components,
   Faq,
   GettingStarted,
@@ -49,6 +50,11 @@ const routesData = {
         {
           path: 'cards',
           component:Home
+        },
+        ,
+        {
+          path: 'table/basictable',
+          component: Home
         }
       ]
     },
@@ -72,6 +78,7 @@ const routes = (
         <Route path="badges" component={Badges}></Route>
         <Route path="buttons" component={Buttons}></Route>
         <Route path="menus" component={Menus}></Route>
+        <Route path="table/basictable" component={BasicTable}></Route>
         <Route path="cards" component={Cards}></Route>
         <Route path="chips" component={Chips}></Route>
         <Route path="dialogs" component={Dialogs}></Route>

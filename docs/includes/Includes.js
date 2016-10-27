@@ -11,6 +11,8 @@ import Badges from './components/Badges';
 import Buttons from './components/Buttons';
 import Menus from './components/Menus';
 
+import BasicTable from './components/table/BasicTable';
+
 import Cards from './components/Cards';
 import Chips from './components/Chips';
 import Dialogs from './components/Dialogs';
@@ -19,6 +21,7 @@ import Layout from './components/Layout';
 export {
   About,
   App,
+  BasicTable,
   Components,
   GettingStarted,
   GitHub,
