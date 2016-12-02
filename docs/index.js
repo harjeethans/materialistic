@@ -1,5 +1,7 @@
 import 'material-design-lite/material.css';
 
+import 'dialog-polyfill/dialog-polyfill.css';
+
 //import './assets/docs.css';
 
 import css from '../src/index.scss';

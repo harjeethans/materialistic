@@ -6,7 +6,7 @@ temp
 coverage
 lib
 __tests__
-fe-bootstrap
+docs/polyfills
 
 # Numerous always-ignore extensions
 *.diff

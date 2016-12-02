@@ -1,10 +1,12 @@
 import React, { PropTypes }  from 'react';
+import ReactDOM from 'react-dom';
 import classnames from 'classnames';
 
 class RenderInContainer extends React.Component {
 
   constructor(props, context) {
     super(props, context);
+    this._underlayNode = null;
   }
 
   componentDidMount() {
@@ -14,16 +16,26 @@ class RenderInContainer extends React.Component {
   }
 
   componentDidUpdate() {
+    if(this.props.open){
+      this._underlayNode = document.createElement("div");
+      this._underlayNode.className = 'mdl-dialog--underlay';
+      this.props.container.appendChild(this._underlayNode);
+    } else {
+      if(this._underlayNode){
+        document.body.removeChild(this._underlayNode);
+      }
+    }
     this._renderLayer();
   }
 
   componentWillUnmount() {
     React.unmountComponentAtNode(this.popup);
     this.props.container.removeChild(this.popup);
+    this.props.container.removeChild(this._underlayNode);
   }
 
   _renderLayer() {
-    React.render(this.props.children, this.popup);
+    ReactDOM.render(this.props.children, this.popup);
   }
 
   render() {
@@ -36,14 +48,14 @@ class RenderInContainer extends React.Component {
 
 
 RenderInContainer.propTypes = {
-  children: PropTypes.array,
-  container: React.PropTypes.oneOfType([
-    componentOrElement
-  ])
+  container: PropTypes.object,
+  open: PropTypes.bool,
+  underlay: PropTypes.bool
 }
 
 RenderInContainer.defaultProps = {
-  container: document.body
+  container: document.body,
+  open: false
 }
 
 export default RenderInContainer;

@@ -12,5 +12,8 @@ export const sidebarData = [
   }, {
     text: 'Menus',
     href: 'components/menus'
+  }, {
+    text: 'Dialogs',
+    href: 'components/dialogs'
   }
 ];
